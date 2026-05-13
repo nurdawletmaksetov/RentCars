@@ -2,6 +2,8 @@ import {Badge, Button, Flex, Grid, Stack, Title} from "@mantine/core";
 import {Container} from "../features/lib/container.tsx";
 import {RentCarCard} from "../features/components/RentCarCard.tsx";
 import {IconArrowRight} from "@tabler/icons-react";
+import {modals} from "@mantine/modals";
+import {RentRegistrationModal} from "../features/components/RentRegistrationModal.tsx";
 
 type PopularRentCarsProps = {
     isMedium?: boolean;
@@ -73,6 +75,16 @@ const rentCars: rentCarsResponse[] = [
 ]
 
 export const PopularRentCars = ({isSmall, isMedium}: PopularRentCarsProps) => {
+
+    const handleOpenModal = () => {
+        modals.openConfirmModal({
+            title: "Rent Car",
+            children: (
+                <RentRegistrationModal/>
+            ),
+            labels: {confirm: 'Send', cancel: 'Cancel'},
+        })
+    }
     return (
         <Flex py={84}>
             <Container>
@@ -100,6 +112,7 @@ export const PopularRentCars = ({isSmall, isMedium}: PopularRentCarsProps) => {
                                     gearbox={car.gearbox}
                                     doors={car.doors}
                                     price={car.price}
+                                    onClick={handleOpenModal}
                                 />
                             </Grid.Col>
                         ))}

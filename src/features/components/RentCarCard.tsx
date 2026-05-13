@@ -8,6 +8,7 @@ import {
     IconUser
 } from "@tabler/icons-react";
 
+
 type RentCarCardProps = {
     img: string;
     name: string;
@@ -18,6 +19,7 @@ type RentCarCardProps = {
     gearbox: boolean;
     doors: string;
     price: string;
+    onClick: () => void;
 }
 
 export const RentCarCard = ({
@@ -29,7 +31,8 @@ export const RentCarCard = ({
                                 airCondition,
                                 gearbox,
                                 doors,
-                                price
+                                price,
+                                onClick
                             }: RentCarCardProps) => {
     return (
         <Box style={{boxShadow: "0px 12px 24px 0px #104C8B16"}} h={"100%"} bdrs={16} p={24}>
@@ -86,6 +89,7 @@ export const RentCarCard = ({
                     h={40}
                     fw={400}
                     fz={14}
+                    onClick={onClick}
                     rightSection={
                         <IconArrowRight size={20} color={"#FFFFFF"}/>
                     }
