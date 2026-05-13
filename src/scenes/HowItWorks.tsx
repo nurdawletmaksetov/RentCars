@@ -13,12 +13,12 @@ type ImagesResponse = {
 }
 
 const images: ImagesResponse[] = [
-    {id: 1, img: "/public/img/honda.svg"},
-    {id: 2, img: "/public/img/jaguar.svg"},
-    {id: 3, img: "/public/img/nissan.svg"},
-    {id: 4, img: "/public/img/valvo.svg"},
-    {id: 5, img: "/public/img/audi.svg"},
-    {id: 6, img: "/public/img/acura.svg"}
+    {id: 1, img: "/img/honda.svg"},
+    {id: 2, img: "/img/jaguar.svg"},
+    {id: 3, img: "/img/nissan.svg"},
+    {id: 4, img: "/img/valvo.svg"},
+    {id: 5, img: "/img/audi.svg"},
+    {id: 6, img: "/img/acura.svg"}
 ]
 
 export const HowItWorks = ({isSmall, isMedium}: HowItWorksProps) => {

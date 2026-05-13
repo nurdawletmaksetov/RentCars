@@ -54,7 +54,7 @@ export const WhyUs = ({isSmall, isMedium}: WhyUsProps) => {
                                        bdrs={8}>
                                     WHY CHOOSE US
                                 </Badge>
-                                <Title c={"#333333"} fz={isSmall ? 28 : 32} fw={500}>
+                                <Title c={"#333333"} fz={isSmall ? 28 : 32} fw={500} ta={isSmall ? "center" : "start"}>
                                     We offer the best experience with our rental deals
                                 </Title>
                             </Stack>
